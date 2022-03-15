@@ -7,8 +7,8 @@ assignees: ''
 
 ---
 
-# User Story
+### User Story
 As a <role>, I want <feature> so that <reason>.
 
-# Acceptance Criteria
+### Acceptance Criteria
 All neccessary acceptance criteria ought to be documented here.
