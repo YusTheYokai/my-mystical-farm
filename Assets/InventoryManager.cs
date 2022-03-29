@@ -9,30 +9,29 @@ public class InventoryManager : MonoBehaviour {
     [SerializeField] private GameObject slotHolder;
     [SerializeField] private ItemClass itemToAdd;
     [SerializeField] private ItemClass itemToRemove;
-
     [SerializeField] private SlotClass[] startItems;
+
     private SlotClass[] items;
-
     private GameObject[] slots;
-
     private SlotClass movingSlot;
     private SlotClass tempSlot;
     private SlotClass orginalSlot;
     bool isMovingItem;
+
     private void Start() {
         slots = new GameObject[slotHolder.transform.childCount];
         items = new SlotClass[slots.Length];
         //initializing slots 
-        for(int i = 0; i < items.Length; i++) {
+        for (int i = 0; i < items.Length; i++) {
             items[i] = new SlotClass();
         }
 
-        for(int i = 0; i < startItems.Length; i++) {
+        for (int i = 0; i < startItems.Length; i++) {
             items[i] = startItems[i];
         }
 
         //set all slots
-        for(int i = 0; i < slotHolder.transform.childCount; i++) {
+        for (int i = 0; i < slotHolder.transform.childCount; i++) {
             slots[i] = slotHolder.transform.GetChild(i).gameObject;
         }
         
@@ -45,27 +44,27 @@ public class InventoryManager : MonoBehaviour {
         itemCursor.SetActive(isMovingItem);
         itemCursor.transform.position = Input.mousePosition;
 
-        if(isMovingItem) {
+        if (isMovingItem) {
             itemCursor.GetComponent<Image>().sprite = movingSlot.GetItem().itemIcon;
         }
 
-        if(Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0)) {
             //find closest slot that is clicked on
-            if(isMovingItem) {
+            if (isMovingItem) {
                 endItemMove();
             } else {
                 StartItemMove();
             }
         }
         
-        if(Input.GetKeyDown("e")) {
+        if (Input.GetKeyDown("e")) {
             inventoryCanvas.gameObject.SetActive(!inventoryCanvas.gameObject.activeInHierarchy);
         }
     }
 
     #region Inventory Utils 
     public void RefreshUI() {
-        for(int i = 0; i < slots.Length; i++) {
+        for (int i = 0; i < slots.Length; i++) {
             try {
                 slots[i].transform.GetChild(0).GetComponent<Image>().enabled = true;
                 slots[i].transform.GetChild(0).GetComponent<Image>().sprite = items[i].GetItem().itemIcon;
@@ -81,14 +80,15 @@ public class InventoryManager : MonoBehaviour {
             }
         }
     }
+
     public bool Add(ItemClass item, int quantity) {
         //check if inventory contains item
         SlotClass slot = Contains(item);
-        if(slot != null) { //&& slot.GetItem().isStackable
+        if (slot != null) { //&& slot.GetItem().isStackable
             slot.AddQuantity(1);
         } else {
-            for(int i = 0; i < items.Length; i++) {
-                if(items[i].GetItem() == null) { //empty slot
+            for (int i = 0; i < items.Length; i++) {
+                if (items[i].GetItem() == null) { //empty slot
                     items[i].AddItem(item, quantity);
                     break;
                 }
@@ -103,13 +103,13 @@ public class InventoryManager : MonoBehaviour {
     public bool Remove(ItemClass item) {
         //items.Remove(item);
         SlotClass temp = Contains(item);
-        if(temp != null) {
-            if(temp.GetQuantity() > 1) {
+        if (temp != null) {
+            if (temp.GetQuantity() > 1) {
                 temp.SubQuantity(1);
             } else {
                 int slotToRemoveIndex = 0;
-                for(int i = 0; i < items.Length; i++) {
-                    if(items[i].GetItem() == item) {
+                for (int i = 0; i < items.Length; i++) {
+                    if (items[i].GetItem() == item) {
                         slotToRemoveIndex = i;
                         break;
                     }
@@ -125,8 +125,8 @@ public class InventoryManager : MonoBehaviour {
     }
 
     public SlotClass Contains(ItemClass item) {
-        for(int i = 0; i < items.Length; i++) {
-            if(items[i].GetItem() == item) {
+        for (int i = 0; i < items.Length; i++) {
+            if (items[i].GetItem() == item) {
                 return items[i];
             }
         }
@@ -137,9 +137,10 @@ public class InventoryManager : MonoBehaviour {
     #region Moving Items
     private bool StartItemMove() {
         orginalSlot = GetClosestSlot();
-        if(orginalSlot == null || orginalSlot.GetItem() == null) {
+        if (orginalSlot == null || orginalSlot.GetItem() == null) {
             return false; //item to move doesn't exist
         }
+
         movingSlot = new SlotClass(orginalSlot);
         orginalSlot.Clear();
         isMovingItem = true;
@@ -149,13 +150,13 @@ public class InventoryManager : MonoBehaviour {
 
     private bool endItemMove() {
         orginalSlot = GetClosestSlot();
-        if(orginalSlot == null) {
+        if (orginalSlot == null) {
             Add(movingSlot.GetItem(), movingSlot.GetQuantity());
             movingSlot.Clear();
         } else {
-            if(orginalSlot.GetItem() != null) {
-                if(orginalSlot.GetItem() == movingSlot.GetItem()) {
-                    if(orginalSlot.GetItem().isStackable) {
+            if (orginalSlot.GetItem() != null) {
+                if (orginalSlot.GetItem() == movingSlot.GetItem()) {
+                    if (orginalSlot.GetItem().isStackable) {
                         orginalSlot.AddQuantity(movingSlot.GetQuantity());
                         movingSlot.Clear();
                     } else {
@@ -180,10 +181,11 @@ public class InventoryManager : MonoBehaviour {
             RefreshUI();
             return true;
     }
+    
     private SlotClass GetClosestSlot() {
 
-        for(int i = 0; i < slots.Length; i++) {
-            if(Vector2.Distance(slots[i].transform.position, Input.mousePosition) <= 27) {
+        for (int i = 0; i < slots.Length; i++) {
+            if (Vector2.Distance(slots[i].transform.position, Input.mousePosition) <= 27) {
                 return items[i];
             }
         }
