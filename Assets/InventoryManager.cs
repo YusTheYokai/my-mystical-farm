@@ -176,12 +176,12 @@ public class InventoryManager : MonoBehaviour {
             }
         }
 
-            isMovingItem = false;
-            //after placing item -> refresh UI
-            RefreshUI();
-            return true;
+        isMovingItem = false;
+        //after placing item -> refresh UI
+        RefreshUI();
+        return true;
     }
-    
+
     private SlotClass GetClosestSlot() {
 
         for (int i = 0; i < slots.Length; i++) {
