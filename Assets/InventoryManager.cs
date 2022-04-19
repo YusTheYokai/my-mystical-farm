@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,12 +9,25 @@ public class InventoryManager : MonoBehaviour {
     [SerializeField] private ItemClass itemToRemove;
     [SerializeField] private SlotClass[] startItems;
 
+    [SerializeField] private Text moneyText;
+
     private SlotClass[] items;
     private GameObject[] slots;
     private SlotClass movingSlot;
     private SlotClass tempSlot;
     private SlotClass orginalSlot;
     bool isMovingItem;
+
+    private float _money;
+    public float Money {
+        get {
+            return _money;
+        }
+        set {
+            _money = value;
+            moneyText.text = _money.ToString();
+        }
+    }
 
     private void Start() {
         slots = new GameObject[slotHolder.transform.childCount];
@@ -38,6 +49,8 @@ public class InventoryManager : MonoBehaviour {
         RefreshUI();
         Add(itemToAdd, 1);
         Remove(itemToRemove);
+
+        Money = 5f;
     }
 
     private void Update() {
