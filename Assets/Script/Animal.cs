@@ -14,7 +14,7 @@ public class Animal : MonoBehaviour{
     private Rigidbody2D myRigidbody;
 
     // Start is called before the first frame update
-    void Start(){
+    void Start() {
         myRigidbody = GetComponent<Rigidbody2D>();
 
         waitCounter = waitTime;
@@ -24,11 +24,11 @@ public class Animal : MonoBehaviour{
     }
 
     // Update is called once per frame
-    void Update(){
-        if(isWalking){
+    void Update() {
+        if (isWalking) {
             walkCounter -= Time.deltaTime;
 
-            switch(WalkDirection){
+            switch (WalkDirection) {
                 case 0: 
                     myRigidbody.velocity = new Vector2(0, moveSpeed);
                     break;
@@ -43,24 +43,23 @@ public class Animal : MonoBehaviour{
                     break;
             }
 
-            if(walkCounter < 0){
+            if (walkCounter < 0) {
                 isWalking = false;
                 waitCounter = waitTime;
             }
-        }
-        else{
+        } else {
             waitCounter -= Time.deltaTime;
 
             myRigidbody.velocity = Vector2.zero;
 
-            if(waitCounter < 0){
+            if (waitCounter < 0) {
                 ChooseDirection();
             }
         }
         
     }
 
-    public void ChooseDirection(){
+    public void ChooseDirection() {
 
         WalkDirection = Random.Range(0, 4);
         isWalking = true;
