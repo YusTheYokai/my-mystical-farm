@@ -53,7 +53,7 @@ public class Animal : MonoBehaviour{
 
             myRigidbody.velocity = Vector2.zero;
 
-            if(waitCounter < 0){
+            if (waitCounter < 0) {
                 ChooseDirection();
             }
         }
