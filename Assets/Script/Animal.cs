@@ -49,7 +49,7 @@ public class Animal : MonoBehaviour{
             }
         }
         else{
-            walkCounter -= Time.deltaTime;
+            waitCounter -= Time.deltaTime;
 
             myRigidbody.velocity = Vector2.zero;
 
@@ -62,7 +62,7 @@ public class Animal : MonoBehaviour{
 
     public void ChooseDirection(){
 
-        WalkDirection = Random.Range (0, 4);
+        WalkDirection = Random.Range(0, 4);
         isWalking = true;
         walkCounter = walkTime;
     }
