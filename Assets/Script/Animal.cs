@@ -14,7 +14,7 @@ public class Animal : MonoBehaviour{
     private Rigidbody2D myRigidbody;
 
     // Start is called before the first frame update
-    void Start(){
+    void Start() {
         myRigidbody = GetComponent<Rigidbody2D>();
 
         waitCounter = waitTime;
