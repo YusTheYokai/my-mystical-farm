@@ -25,7 +25,7 @@ public class Animal : MonoBehaviour{
 
     // Update is called once per frame
     void Update() {
-        if (isWalking) {
+        if(isWalking) {
             walkCounter -= Time.deltaTime;
 
             switch (WalkDirection) {
