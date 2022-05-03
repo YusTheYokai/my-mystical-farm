@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-    private Rigidbody2D rb;
-    private Animator animator;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Animator animator;
     public Vector2 movement;
     private float moveSpeed = 1;//0.5f
     private float maxStamina = 250f;
@@ -39,4 +39,5 @@ public class PlayerMovement : MonoBehaviour {
         
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
+
 }
