@@ -3,6 +3,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour {
     public static SoundManager Instance;
 
+    [SerializeField] private Canvas soundCanvas;
     [SerializeField] private AudioSource _effectSource;
     [SerializeField] private AudioSource _musicSource;
 
@@ -27,5 +28,11 @@ public class SoundManager : MonoBehaviour {
 
     public void ChangeMasterVolume(float volume) {
         AudioListener.volume = volume;
+    }
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            soundCanvas.gameObject.SetActive(!soundCanvas.gameObject.activeInHierarchy);
+        }
     }
 }
