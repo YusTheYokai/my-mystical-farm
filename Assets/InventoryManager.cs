@@ -50,7 +50,8 @@ public class InventoryManager : MonoBehaviour {
         Add(itemToAdd, 1);
         Remove(itemToRemove);
 
-        Money = 5f;
+        Money = 5f; 
+        
     }
 
     private void Update() {
