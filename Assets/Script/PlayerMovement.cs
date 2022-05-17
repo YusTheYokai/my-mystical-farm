@@ -14,9 +14,7 @@ public class PlayerMovement : MonoBehaviour {
     private const float walking = 1;
     
     private void Start() { 
-        
-          Physics2D.IgnoreLayerCollision(3,6);
-        
+        Physics2D.IgnoreLayerCollision(3,6);
     }
     
     void Update() {

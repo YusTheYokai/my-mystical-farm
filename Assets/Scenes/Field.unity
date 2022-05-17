@@ -2836,7 +2836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 2032567161}
-  offset: {x: 0, y: 0, z: -1}
+  offset: {x: 0, y: 0, z: -5}
 --- !u!1 &798163266
 GameObject:
   m_ObjectHideFlags: 0
@@ -4484,6 +4484,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3818827001567244370, guid: df4a5bfc43a856440b65d94ba9bee211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3818827001567244370, guid: df4a5bfc43a856440b65d94ba9bee211, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -4504,12 +4508,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3818827001567244398, guid: df4a5bfc43a856440b65d94ba9bee211, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.2309854
+      objectReference: {fileID: 0}
+    - target: {fileID: 3818827001567244398, guid: df4a5bfc43a856440b65d94ba9bee211, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.0709355
+      objectReference: {fileID: 0}
+    - target: {fileID: 3818827001567244398, guid: df4a5bfc43a856440b65d94ba9bee211, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.077
+      value: -3.8902
       objectReference: {fileID: 0}
     - target: {fileID: 3818827001567244398, guid: df4a5bfc43a856440b65d94ba9bee211, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.799
+      value: -0.5488
       objectReference: {fileID: 0}
     - target: {fileID: 3818827001567244398, guid: df4a5bfc43a856440b65d94ba9bee211, type: 3}
       propertyPath: m_LocalPosition.z

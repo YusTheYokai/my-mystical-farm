@@ -51,7 +51,6 @@ public class InventoryManager : MonoBehaviour {
         Remove(itemToRemove);
 
         Money = 5f; 
-        
     }
 
     private void Update() {
