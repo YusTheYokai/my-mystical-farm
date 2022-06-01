@@ -137,6 +137,12 @@ GameObject:
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
+  - component: {fileID: 482836369}
+  - component: {fileID: 482836371}
+  - component: {fileID: 482836370}
+  m_Layer: 5
+  m_Name: Money
+  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,6 +211,90 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_GameObject: {fileID: 482836368}
+  m_CullTransparentMesh: 1
+--- !u!1 &529487532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 529487535}
+  - component: {fileID: 529487534}
+  - component: {fileID: 529487533}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &529487533
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529487532}
+  m_Enabled: 1
+--- !u!20 &529487534
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529487532}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &529487535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529487532}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 390.5664, y: 132.89238, z: -625.7225}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &581306213 stripped
 RectTransform:
@@ -221,6 +311,10 @@ PrefabInstance:
     - target: {fileID: 3154581696935460304, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_Name
       value: SlotPanel (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3154581696935460304, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
+      propertyPath: m_TagString
+      value: Inventory
       objectReference: {fileID: 0}
     - target: {fileID: 3400171697735170591, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_Pivot.x
@@ -306,6 +400,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3646339747468808079, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
+      propertyPath: inventoryCanvas
+      value: 
+      objectReference: {fileID: 1858041846}
     - target: {fileID: 3769152250035164907, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -326,6 +424,10 @@ PrefabInstance:
     - target: {fileID: 3154581696935460304, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_Name
       value: SlotPanel (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3154581696935460304, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
+      propertyPath: m_TagString
+      value: Inventory
       objectReference: {fileID: 0}
     - target: {fileID: 3400171697735170591, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_Pivot.x
@@ -411,6 +513,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3646339747468808079, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
+      propertyPath: inventoryCanvas
+      value: 
+      objectReference: {fileID: 1858041846}
     - target: {fileID: 3769152250035164907, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -436,6 +542,10 @@ PrefabInstance:
     - target: {fileID: 3154581696935460304, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_Name
       value: SlotPanel (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3154581696935460304, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
+      propertyPath: m_TagString
+      value: Inventory
       objectReference: {fileID: 0}
     - target: {fileID: 3400171697735170591, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_Pivot.x
@@ -521,6 +631,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3646339747468808079, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
+      propertyPath: inventoryCanvas
+      value: 
+      objectReference: {fileID: 1858041846}
     - target: {fileID: 3769152250035164907, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -554,7 +668,7 @@ GameObject:
   - component: {fileID: 1247958941}
   m_Layer: 5
   m_Name: Title
-  m_TagString: Untagged
+  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -706,6 +820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotPanel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3154581696935460304, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
+      propertyPath: m_TagString
+      value: Inventory
+      objectReference: {fileID: 0}
     - target: {fileID: 3400171697735170591, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -790,6 +908,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3646339747468808079, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
+      propertyPath: inventoryCanvas
+      value: 
+      objectReference: {fileID: 1858041846}
     - target: {fileID: 3769152250035164907, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -842,6 +964,8 @@ MonoBehaviour:
   startItems:
   - item: {fileID: 11400000, guid: f9c72ca95983d154aa7e7351254fe77a, type: 2}
     quantity: 5
+  moneyText: {fileID: 1287098128}
+  drop: 0
 --- !u!4 &1323204636
 Transform:
   m_ObjectHideFlags: 0
@@ -867,9 +991,10 @@ GameObject:
   - component: {fileID: 1357121296}
   - component: {fileID: 1357121298}
   - component: {fileID: 1357121297}
+  - component: {fileID: 1357121299}
   m_Layer: 5
   m_Name: InventoryPanel
-  m_TagString: Untagged
+  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -933,6 +1058,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357121295}
   m_CullTransparentMesh: 1
+--- !u!114 &1357121299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357121295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 789ea9896b9baf345b2d2071ef64e2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryManager: {fileID: 1323204635}
 --- !u!1 &1438830414
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,9 +1080,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1438830415}
+  - component: {fileID: 1438830416}
   m_Layer: 5
   m_Name: Slots
-  m_TagString: Untagged
+  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -976,6 +1115,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 22.8709, y: 100}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &1438830416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438830414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b8d44d5dbae0a4ba3cff6110262dc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1528537116 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3400171697735170591, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
@@ -991,6 +1142,10 @@ PrefabInstance:
     - target: {fileID: 3154581696935460304, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_Name
       value: SlotPanel (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3154581696935460304, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
+      propertyPath: m_TagString
+      value: Inventory
       objectReference: {fileID: 0}
     - target: {fileID: 3400171697735170591, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_Pivot.x
@@ -1076,6 +1231,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3646339747468808079, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
+      propertyPath: inventoryCanvas
+      value: 
+      objectReference: {fileID: 1858041846}
     - target: {fileID: 3769152250035164907, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1096,6 +1255,10 @@ PrefabInstance:
     - target: {fileID: 3154581696935460304, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_Name
       value: SlotPanel (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3154581696935460304, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
+      propertyPath: m_TagString
+      value: Inventory
       objectReference: {fileID: 0}
     - target: {fileID: 3400171697735170591, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_Pivot.x
@@ -1181,6 +1344,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3646339747468808079, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
+      propertyPath: inventoryCanvas
+      value: 
+      objectReference: {fileID: 1858041846}
     - target: {fileID: 3769152250035164907, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1374,6 +1541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlotPanel (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3154581696935460304, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
+      propertyPath: m_TagString
+      value: Inventory
+      objectReference: {fileID: 0}
     - target: {fileID: 3400171697735170591, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1458,6 +1629,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3646339747468808079, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
+      propertyPath: inventoryCanvas
+      value: 
+      objectReference: {fileID: 1858041846}
     - target: {fileID: 3769152250035164907, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1482,6 +1657,10 @@ PrefabInstance:
     - target: {fileID: 3154581696935460304, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3154581696935460304, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
+      propertyPath: m_TagString
+      value: Inventory
       objectReference: {fileID: 0}
     - target: {fileID: 3400171697735170591, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_Pivot.x
@@ -1567,6 +1746,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3646339747468808079, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
+      propertyPath: inventoryCanvas
+      value: 
+      objectReference: {fileID: 1858041846}
     - target: {fileID: 3769152250035164907, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_IsActive
       value: 1

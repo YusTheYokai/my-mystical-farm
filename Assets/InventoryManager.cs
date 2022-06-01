@@ -17,6 +17,7 @@ public class InventoryManager : MonoBehaviour {
     private SlotClass tempSlot;
     private SlotClass orginalSlot;
     bool isMovingItem;
+    public bool drop;
 
     private void Start() {
         slots = new GameObject[slotHolder.transform.childCount];
@@ -51,9 +52,11 @@ public class InventoryManager : MonoBehaviour {
         if (Input.GetMouseButtonDown(0)) {
             //find closest slot that is clicked on
             if (isMovingItem) {
-                endItemMove();
+                //endItemMove();
+                Debug.Log(GetClosestSlot());
             } else {
-                StartItemMove();
+               // StartItemMove();
+                Debug.Log(GetClosestSlot().GetItem());
             }
         }
         
@@ -135,52 +138,60 @@ public class InventoryManager : MonoBehaviour {
     #endregion Inventory Utils
 
     #region Moving Items
-    private bool StartItemMove() {
-        orginalSlot = GetClosestSlot();
-        if (orginalSlot == null || orginalSlot.GetItem() == null) {
-            return false; //item to move doesn't exist
-        }
+    // private bool StartItemMove() {
+    //     orginalSlot = GetClosestSlot();
+    //     if (orginalSlot == null || orginalSlot.GetItem() == null) {
+    //         return false; //item to move doesn't exist
+    //     }
 
-        movingSlot = new SlotClass(orginalSlot);
-        orginalSlot.Clear();
-        isMovingItem = true;
-        RefreshUI();
-        return true;
-    }
+    //     movingSlot = new SlotClass(orginalSlot);
+    //     orginalSlot.Clear();
+    //     isMovingItem = true;
+    //     RefreshUI();
+    //     return true;
+    // }
 
-    private bool endItemMove() {
-        orginalSlot = GetClosestSlot();
-        if (orginalSlot == null) {
-            Add(movingSlot.GetItem(), movingSlot.GetQuantity());
-            movingSlot.Clear();
-        } else {
-            if (orginalSlot.GetItem() != null) {
-                if (orginalSlot.GetItem() == movingSlot.GetItem()) {
-                    if (orginalSlot.GetItem().isStackable) {
-                        orginalSlot.AddQuantity(movingSlot.GetQuantity());
-                        movingSlot.Clear();
-                    } else {
-                        return false;
-                    }
-                } else {
-                    //swap items
-                    tempSlot = new SlotClass(orginalSlot); 
-                    orginalSlot.AddItem(movingSlot.GetItem(), movingSlot.GetQuantity());
-                    movingSlot.AddItem(tempSlot.GetItem(), tempSlot.GetQuantity());
-                    RefreshUI();
-                    return true;
-                }
-            } else {
-                orginalSlot.AddItem(movingSlot.GetItem(), movingSlot.GetQuantity());
-                movingSlot.Clear();
-            }
-        }
+    // private bool endItemMove() {
+    //     // Debug.Log(GetClosestSlot());
+    //     if (drop){
+    //         Debug.Log("Item dropped");
+    //         //TODO....
+    //         Debug.Log(drop);
+    //     } else {
+    //         Debug.Log(drop);
+    //         orginalSlot = GetClosestSlot();
+    //         if (orginalSlot == null) {
+    //             Add(movingSlot.GetItem(), movingSlot.GetQuantity());
+    //             movingSlot.Clear();
+    //         } else {
+    //             if (orginalSlot.GetItem() != null) {
+    //                 if (orginalSlot.GetItem() == movingSlot.GetItem()) {
+    //                     if (orginalSlot.GetItem().isStackable) {
+    //                         orginalSlot.AddQuantity(movingSlot.GetQuantity());
+    //                         movingSlot.Clear();
+    //                     } else {
+    //                         return false;
+    //                     }
+    //                 } else {
+    //                     //swap items
+    //                     tempSlot = new SlotClass(orginalSlot); 
+    //                     orginalSlot.AddItem(movingSlot.GetItem(), movingSlot.GetQuantity());
+    //                     movingSlot.AddItem(tempSlot.GetItem(), tempSlot.GetQuantity());
+    //                     RefreshUI();
+    //                     return true;
+    //                 }
+    //             } else {
+    //                 orginalSlot.AddItem(movingSlot.GetItem(), movingSlot.GetQuantity());
+    //                 movingSlot.Clear();
+    //             }
+    //         }
+    //     }
 
-        isMovingItem = false;
-        //after placing item -> refresh UI
-        RefreshUI();
-        return true;
-    }
+    //     isMovingItem = false;
+    //     //after placing item -> refresh UI
+    //     RefreshUI();
+    //     return true;
+    // }
 
     private SlotClass GetClosestSlot() {
 
