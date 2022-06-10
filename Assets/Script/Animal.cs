@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Animal : MonoBehaviour{
+
     public float moveSpeed;
     public bool isWalking;
     public float walkTime;

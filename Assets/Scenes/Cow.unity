@@ -136,8 +136,9 @@ GameObject:
   - component: {fileID: 39663302}
   - component: {fileID: 39663301}
   - component: {fileID: 39663300}
+  - component: {fileID: 39663305}
   m_Layer: 0
-  m_Name: cow_pic
+  m_Name: cow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,6 +160,10 @@ MonoBehaviour:
   isWalking: 0
   walkTime: 1
   waitTime: 3
+  cow: {fileID: 39663303}
+  cowForms:
+  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
+  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
 --- !u!50 &39663301
 Rigidbody2D:
   serializedVersion: 4
@@ -196,7 +201,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.4868973, y: 0.5065513}
     oldSize: {x: 31.25, y: 31.25}
     newSize: {x: 31.25, y: 31.25}
     adaptiveTilingThreshold: 0.5
@@ -265,12 +270,60 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39663299}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.98762894, y: 1.6441327, z: 0}
+  m_LocalPosition: {x: 7.9857, y: 15.6862, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &39663305
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39663299}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4868973, y: 0.5065513}
+    oldSize: {x: 31.25, y: 31.25}
+    newSize: {x: 31.25, y: 31.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.34053993, y: -5.767229}
+      - {x: -0.34053993, y: -7.829729}
+      - {x: 4.15946, y: -7.829729}
+      - {x: 4.28446, y: -7.704729}
+      - {x: 4.78446, y: -4.704729}
+      - {x: 5.47196, y: -4.829729}
+      - {x: 6.15946, y: -4.079729}
+      - {x: 6.15946, y: -2.329729}
+      - {x: 5.53446, y: -0.7672291}
+      - {x: 4.40946, y: 0.6077709}
+      - {x: -0.028039932, y: 2.420271}
+      - {x: -9.71554, y: 2.420271}
+      - {x: -9.71554, y: 0.8577709}
+      - {x: -9.21554, y: 0.29527092}
+      - {x: -8.15304, y: 0.04527092}
+      - {x: -8.65304, y: -3.454729}
+      - {x: -7.27804, y: -4.704729}
+      - {x: -5.46554, y: -4.892229}
+      - {x: -5.34054, y: -7.829729}
+      - {x: -3.21554, y: -7.829729}
+      - {x: -2.90304, y: -6.392229}
+      - {x: -2.84054, y: -7.829729}
+      - {x: -0.71553993, y: -7.829729}
 --- !u!1 &90181611
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,8 +420,9 @@ GameObject:
   - component: {fileID: 796746628}
   - component: {fileID: 796746627}
   - component: {fileID: 796746626}
+  - component: {fileID: 796746631}
   m_Layer: 0
-  m_Name: cow_pic (3)
+  m_Name: cow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -390,6 +444,10 @@ MonoBehaviour:
   isWalking: 0
   walkTime: 1
   waitTime: 3
+  cow: {fileID: 796746629}
+  cowForms:
+  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
+  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
 --- !u!61 &796746627
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -406,7 +464,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.4868973, y: 0.5065513}
     oldSize: {x: 31.25, y: 31.25}
     newSize: {x: 31.25, y: 31.25}
     adaptiveTilingThreshold: 0.5
@@ -502,6 +560,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &796746631
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796746625}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4868973, y: 0.5065513}
+    oldSize: {x: 31.25, y: 31.25}
+    newSize: {x: 31.25, y: 31.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.34053993, y: -5.767229}
+      - {x: -0.34053993, y: -7.829729}
+      - {x: 4.15946, y: -7.829729}
+      - {x: 4.28446, y: -7.704729}
+      - {x: 4.78446, y: -4.704729}
+      - {x: 5.47196, y: -4.829729}
+      - {x: 6.15946, y: -4.079729}
+      - {x: 6.15946, y: -2.329729}
+      - {x: 5.53446, y: -0.7672291}
+      - {x: 4.40946, y: 0.6077709}
+      - {x: -0.028039932, y: 2.420271}
+      - {x: -9.71554, y: 2.420271}
+      - {x: -9.71554, y: 0.8577709}
+      - {x: -9.21554, y: 0.29527092}
+      - {x: -8.15304, y: 0.04527092}
+      - {x: -8.65304, y: -3.454729}
+      - {x: -7.27804, y: -4.704729}
+      - {x: -5.46554, y: -4.892229}
+      - {x: -5.34054, y: -7.829729}
+      - {x: -3.21554, y: -7.829729}
+      - {x: -2.90304, y: -6.392229}
+      - {x: -2.84054, y: -7.829729}
+      - {x: -0.71553993, y: -7.829729}
 --- !u!1 &1181283283
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,8 +621,9 @@ GameObject:
   - component: {fileID: 1181283286}
   - component: {fileID: 1181283285}
   - component: {fileID: 1181283284}
+  - component: {fileID: 1181283289}
   m_Layer: 0
-  m_Name: cow_pic (2)
+  m_Name: cow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -538,6 +645,10 @@ MonoBehaviour:
   isWalking: 0
   walkTime: 1
   waitTime: 3
+  cow: {fileID: 1181283287}
+  cowForms:
+  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
+  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
 --- !u!61 &1181283285
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -554,7 +665,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.4868973, y: 0.5065513}
     oldSize: {x: 31.25, y: 31.25}
     newSize: {x: 31.25, y: 31.25}
     adaptiveTilingThreshold: 0.5
@@ -650,6 +761,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1181283289
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181283283}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4868973, y: 0.5065513}
+    oldSize: {x: 31.25, y: 31.25}
+    newSize: {x: 31.25, y: 31.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.34053993, y: -5.767229}
+      - {x: -0.34053993, y: -7.829729}
+      - {x: 4.15946, y: -7.829729}
+      - {x: 4.28446, y: -7.704729}
+      - {x: 4.78446, y: -4.704729}
+      - {x: 5.47196, y: -4.829729}
+      - {x: 6.15946, y: -4.079729}
+      - {x: 6.15946, y: -2.329729}
+      - {x: 5.53446, y: -0.7672291}
+      - {x: 4.40946, y: 0.6077709}
+      - {x: -0.028039932, y: 2.420271}
+      - {x: -9.71554, y: 2.420271}
+      - {x: -9.71554, y: 0.8577709}
+      - {x: -9.21554, y: 0.29527092}
+      - {x: -8.15304, y: 0.04527092}
+      - {x: -8.65304, y: -3.454729}
+      - {x: -7.27804, y: -4.704729}
+      - {x: -5.46554, y: -4.892229}
+      - {x: -5.34054, y: -7.829729}
+      - {x: -3.21554, y: -7.829729}
+      - {x: -2.90304, y: -6.392229}
+      - {x: -2.84054, y: -7.829729}
+      - {x: -0.71553993, y: -7.829729}
 --- !u!1 &1190858872
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,8 +822,9 @@ GameObject:
   - component: {fileID: 1190858875}
   - component: {fileID: 1190858874}
   - component: {fileID: 1190858873}
+  - component: {fileID: 1190858878}
   m_Layer: 0
-  m_Name: cow_pic (4)
+  m_Name: cow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -686,6 +846,10 @@ MonoBehaviour:
   isWalking: 0
   walkTime: 1
   waitTime: 3
+  cow: {fileID: 1190858876}
+  cowForms:
+  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
+  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
 --- !u!61 &1190858874
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -702,7 +866,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.4868973, y: 0.5065513}
     oldSize: {x: 31.25, y: 31.25}
     newSize: {x: 31.25, y: 31.25}
     adaptiveTilingThreshold: 0.5
@@ -792,12 +956,60 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190858872}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.9, y: -1, z: 0}
+  m_LocalPosition: {x: -34.2, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1190858878
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190858872}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4868973, y: 0.5065513}
+    oldSize: {x: 31.25, y: 31.25}
+    newSize: {x: 31.25, y: 31.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.34053993, y: -5.767229}
+      - {x: -0.34053993, y: -7.829729}
+      - {x: 4.15946, y: -7.829729}
+      - {x: 4.28446, y: -7.704729}
+      - {x: 4.78446, y: -4.704729}
+      - {x: 5.47196, y: -4.829729}
+      - {x: 6.15946, y: -4.079729}
+      - {x: 6.15946, y: -2.329729}
+      - {x: 5.53446, y: -0.7672291}
+      - {x: 4.40946, y: 0.6077709}
+      - {x: -0.028039932, y: 2.420271}
+      - {x: -9.71554, y: 2.420271}
+      - {x: -9.71554, y: 0.8577709}
+      - {x: -9.21554, y: 0.29527092}
+      - {x: -8.15304, y: 0.04527092}
+      - {x: -8.65304, y: -3.454729}
+      - {x: -7.27804, y: -4.704729}
+      - {x: -5.46554, y: -4.892229}
+      - {x: -5.34054, y: -7.829729}
+      - {x: -3.21554, y: -7.829729}
+      - {x: -2.90304, y: -6.392229}
+      - {x: -2.84054, y: -7.829729}
+      - {x: -0.71553993, y: -7.829729}
 --- !u!1 &1489385290
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,8 +1023,9 @@ GameObject:
   - component: {fileID: 1489385293}
   - component: {fileID: 1489385292}
   - component: {fileID: 1489385291}
+  - component: {fileID: 1489385296}
   m_Layer: 0
-  m_Name: cow_pic (1)
+  m_Name: cow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -834,6 +1047,10 @@ MonoBehaviour:
   isWalking: 0
   walkTime: 1
   waitTime: 3
+  cow: {fileID: 1489385294}
+  cowForms:
+  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
+  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
 --- !u!61 &1489385292
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -850,7 +1067,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.4868973, y: 0.5065513}
     oldSize: {x: 31.25, y: 31.25}
     newSize: {x: 31.25, y: 31.25}
     adaptiveTilingThreshold: 0.5
@@ -946,3 +1163,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1489385296
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489385290}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4868973, y: 0.5065513}
+    oldSize: {x: 31.25, y: 31.25}
+    newSize: {x: 31.25, y: 31.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.34053993, y: -5.767229}
+      - {x: -0.34053993, y: -7.829729}
+      - {x: 4.15946, y: -7.829729}
+      - {x: 4.28446, y: -7.704729}
+      - {x: 4.78446, y: -4.704729}
+      - {x: 5.47196, y: -4.829729}
+      - {x: 6.15946, y: -4.079729}
+      - {x: 6.15946, y: -2.329729}
+      - {x: 5.53446, y: -0.7672291}
+      - {x: 4.40946, y: 0.6077709}
+      - {x: -0.028039932, y: 2.420271}
+      - {x: -9.71554, y: 2.420271}
+      - {x: -9.71554, y: 0.8577709}
+      - {x: -9.21554, y: 0.29527092}
+      - {x: -8.15304, y: 0.04527092}
+      - {x: -8.65304, y: -3.454729}
+      - {x: -7.27804, y: -4.704729}
+      - {x: -5.46554, y: -4.892229}
+      - {x: -5.34054, y: -7.829729}
+      - {x: -3.21554, y: -7.829729}
+      - {x: -2.90304, y: -6.392229}
+      - {x: -2.84054, y: -7.829729}
+      - {x: -0.71553993, y: -7.829729}
