@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 39663301}
   - component: {fileID: 39663300}
   - component: {fileID: 39663305}
+  - component: {fileID: 39663306}
   m_Layer: 0
   m_Name: cow
   m_TagString: Untagged
@@ -159,11 +160,7 @@ MonoBehaviour:
   moveSpeed: 1
   isWalking: 0
   walkTime: 1
-  waitTime: 3
-  cow: {fileID: 39663303}
-  cowForms:
-  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
-  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
+  waitTime: 1
 --- !u!50 &39663301
 Rigidbody2D:
   serializedVersion: 4
@@ -269,8 +266,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39663299}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.9857, y: 15.6862, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.9857006, y: 15.686199, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -324,6 +321,26 @@ PolygonCollider2D:
       - {x: -2.90304, y: -6.392229}
       - {x: -2.84054, y: -7.829729}
       - {x: -0.71553993, y: -7.829729}
+--- !u!114 &39663306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39663299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a9a27ff5f3e1e48820c46fbf2630b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  isWalking: 0
+  walkTime: 0
+  waitTime: 0
+  cow: {fileID: 39663303}
+  cowForms:
+  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
+  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
 --- !u!1 &90181611
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +503,7 @@ GameObject:
   - component: {fileID: 796746627}
   - component: {fileID: 796746626}
   - component: {fileID: 796746631}
+  - component: {fileID: 796746632}
   m_Layer: 0
   m_Name: cow
   m_TagString: Untagged
@@ -508,11 +526,7 @@ MonoBehaviour:
   moveSpeed: 1
   isWalking: 0
   walkTime: 1
-  waitTime: 3
-  cow: {fileID: 796746629}
-  cowForms:
-  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
-  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
+  waitTime: 1
 --- !u!61 &796746627
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -652,6 +666,26 @@ PolygonCollider2D:
       - {x: -2.90304, y: -6.392229}
       - {x: -2.84054, y: -7.829729}
       - {x: -0.71553993, y: -7.829729}
+--- !u!114 &796746632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796746625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a9a27ff5f3e1e48820c46fbf2630b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  isWalking: 0
+  walkTime: 0
+  waitTime: 0
+  cow: {fileID: 796746629}
+  cowForms:
+  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
+  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
 --- !u!1 &1181283283
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +700,7 @@ GameObject:
   - component: {fileID: 1181283285}
   - component: {fileID: 1181283284}
   - component: {fileID: 1181283289}
+  - component: {fileID: 1181283290}
   m_Layer: 0
   m_Name: cow
   m_TagString: Untagged
@@ -688,11 +723,7 @@ MonoBehaviour:
   moveSpeed: 1
   isWalking: 0
   walkTime: 1
-  waitTime: 3
-  cow: {fileID: 1181283287}
-  cowForms:
-  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
-  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
+  waitTime: 1
 --- !u!61 &1181283285
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -832,6 +863,26 @@ PolygonCollider2D:
       - {x: -2.90304, y: -6.392229}
       - {x: -2.84054, y: -7.829729}
       - {x: -0.71553993, y: -7.829729}
+--- !u!114 &1181283290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181283283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a9a27ff5f3e1e48820c46fbf2630b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  isWalking: 0
+  walkTime: 0
+  waitTime: 0
+  cow: {fileID: 1181283287}
+  cowForms:
+  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
+  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
 --- !u!1 &1190858872
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,6 +897,7 @@ GameObject:
   - component: {fileID: 1190858874}
   - component: {fileID: 1190858873}
   - component: {fileID: 1190858878}
+  - component: {fileID: 1190858879}
   m_Layer: 0
   m_Name: cow
   m_TagString: Untagged
@@ -868,11 +920,7 @@ MonoBehaviour:
   moveSpeed: 1
   isWalking: 0
   walkTime: 1
-  waitTime: 3
-  cow: {fileID: 1190858876}
-  cowForms:
-  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
-  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
+  waitTime: 1
 --- !u!61 &1190858874
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1012,6 +1060,26 @@ PolygonCollider2D:
       - {x: -2.90304, y: -6.392229}
       - {x: -2.84054, y: -7.829729}
       - {x: -0.71553993, y: -7.829729}
+--- !u!114 &1190858879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190858872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a9a27ff5f3e1e48820c46fbf2630b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  isWalking: 0
+  walkTime: 0
+  waitTime: 0
+  cow: {fileID: 1190858876}
+  cowForms:
+  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
+  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
 --- !u!1 &1489385290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,6 +1094,7 @@ GameObject:
   - component: {fileID: 1489385292}
   - component: {fileID: 1489385291}
   - component: {fileID: 1489385296}
+  - component: {fileID: 1489385297}
   m_Layer: 0
   m_Name: cow
   m_TagString: Untagged
@@ -1048,11 +1117,7 @@ MonoBehaviour:
   moveSpeed: 1
   isWalking: 0
   walkTime: 1
-  waitTime: 3
-  cow: {fileID: 1489385294}
-  cowForms:
-  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
-  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
+  waitTime: 1
 --- !u!61 &1489385292
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1192,3 +1257,23 @@ PolygonCollider2D:
       - {x: -2.90304, y: -6.392229}
       - {x: -2.84054, y: -7.829729}
       - {x: -0.71553993, y: -7.829729}
+--- !u!114 &1489385297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489385290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a9a27ff5f3e1e48820c46fbf2630b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  isWalking: 0
+  walkTime: 0
+  waitTime: 0
+  cow: {fileID: 1489385294}
+  cowForms:
+  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
+  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
