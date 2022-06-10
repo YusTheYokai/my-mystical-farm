@@ -13,6 +13,10 @@ public class PlayerMovement : MonoBehaviour {
     private const float sprintStat = 2;
     private const float walking = 1;
     
+    private void Start() { 
+        Physics2D.IgnoreLayerCollision(3,6);
+    }
+    
     void Update() {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
