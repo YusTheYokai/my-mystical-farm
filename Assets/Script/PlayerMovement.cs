@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-    private Rigidbody2D rb;
-    private Animator animator;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Animator animator;
     public Vector2 movement;
     private float moveSpeed = 1;//0.5f
     private float maxStamina = 250f;
     private float currentStamina = 250f;
     private const float sprintStat = 2;
     private const float walking = 1;
+    
+    private void Start() { 
+        Physics2D.IgnoreLayerCollision(3,6);
+    }
     
     void Update() {
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -39,4 +43,5 @@ public class PlayerMovement : MonoBehaviour {
         
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
+
 }
