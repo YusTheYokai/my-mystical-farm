@@ -5,7 +5,6 @@ public class InventoryManager : MonoBehaviour {
     [SerializeField] private Canvas inventoryCanvas;
     [SerializeField] private GameObject itemCursor;
     [SerializeField] private GameObject slotHolder;
-    [SerializeField] private GameObject emptyItem;
     [SerializeField] private ItemClass itemToAdd;
     [SerializeField] private ItemClass itemToRemove;
     [SerializeField] private SlotClass[] startItems;
@@ -48,9 +47,8 @@ public class InventoryManager : MonoBehaviour {
             slots[i] = slotHolder.transform.GetChild(i).gameObject;
         }
         
-        // RefreshUI();
-        // Add(itemToAdd, 1);
-        Instantiate(emptyItem, new Vector3(0, 0, 0), Quaternion.identity, slots[0].transform);
+        RefreshUI();
+        Add(itemToAdd, 1);
         Remove(itemToRemove);
 
         Money = 5f; 
