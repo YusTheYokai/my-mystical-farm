@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
+    public static PlayerMovement Instance;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
     public Vector2 movement;
@@ -13,10 +15,19 @@ public class PlayerMovement : MonoBehaviour {
     private const float sprintStat = 2;
     private const float walking = 1;
     
-    private void Start() { 
+    void Awake() {
+        if (Instance == null) {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else {
+            Destroy(gameObject);
+        }
+    }
+
+    void Start() { 
         Physics2D.IgnoreLayerCollision(3,6);
     }
-    
+
     void Update() {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
@@ -44,4 +55,7 @@ public class PlayerMovement : MonoBehaviour {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
+    public Vector2 getPosition() {
+        return rb.position;
+    }
 }

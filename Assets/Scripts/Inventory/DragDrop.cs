@@ -1,14 +1,19 @@
+using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler {
+using UnityEngine.UI;
+
+public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler {
 
     [SerializeField] private Canvas inventoryCanvas;
+    [SerializeField] private GameObject droppedItemPrefab;
+    [SerializeField] private GameObject droppedItemsContainer;
+
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     private Vector2 startRectTransformPosition;
-    private Transform startParent;
 
     public void Awake() {
         rectTransform = GetComponent<RectTransform>();
@@ -19,8 +24,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         //raycast goes through item and lands on item slot
         canvasGroup.blocksRaycasts = false;
         startRectTransformPosition = rectTransform.anchoredPosition;
-        startParent = transform.parent;
-        transform.SetParent(inventoryCanvas.transform);
     }
 
     public void OnDrag(PointerEventData eventData) {
@@ -30,18 +33,23 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnEndDrag(PointerEventData eventData) {
         if (eventData.pointerCurrentRaycast.gameObject != null) {
-            transform.SetParent(startParent);
             rectTransform.anchoredPosition = startRectTransformPosition;
-            print("if");
+            InventoryManager.Instance.SwapStacks(transform);
         } else {
-            print("else");
+            // create the dropped item
+            GameObject droppedItem = Instantiate(droppedItemPrefab, PlayerMovement.Instance.getPosition(), Quaternion.identity, droppedItemsContainer.transform);
+            // set its scale
+            droppedItem.transform.localScale = new Vector3(2, 2, 2);
+            // set its sprite
+            droppedItem.GetComponent<SpriteRenderer>().sprite = transform.GetChild(0).GetComponent<Image>().sprite;
+            // TODO: set its quantity for pickup
             
+            // reset the stack's position
+            rectTransform.anchoredPosition = startRectTransformPosition;
+            // clear the item(s) from the stack
+            InventoryManager.Instance.ClearStack(transform);
         }
+
         canvasGroup.blocksRaycasts = true;
     } 
-
-    public void OnPointerDown(PointerEventData eventData) {
-    }
-
-
 }
