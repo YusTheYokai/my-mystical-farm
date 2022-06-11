@@ -16,6 +16,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
+        //raycast goes through item and lands on item slot
         canvasGroup.blocksRaycasts = false;
         startRectTransformPosition = rectTransform.anchoredPosition;
         startParent = transform.parent;
@@ -23,6 +24,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     }
 
     public void OnDrag(PointerEventData eventData) {
+        //item is moving alongside the mouse
         rectTransform.anchoredPosition += eventData.delta / inventoryCanvas.scaleFactor;
     }  
 
@@ -33,6 +35,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             print("if");
         } else {
             print("else");
+            
         }
         canvasGroup.blocksRaycasts = true;
     } 

@@ -137,12 +137,6 @@ GameObject:
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
-  - component: {fileID: 482836369}
-  - component: {fileID: 482836371}
-  - component: {fileID: 482836370}
-  m_Layer: 5
-  m_Name: Money
-  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,8 +205,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_GameObject: {fileID: 482836368}
-  m_CullTransparentMesh: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &529487532
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,7 +957,6 @@ MonoBehaviour:
   startItems:
   - item: {fileID: 11400000, guid: f9c72ca95983d154aa7e7351254fe77a, type: 2}
     quantity: 5
-  moneyText: {fileID: 1287098128}
   drop: 0
 --- !u!4 &1323204636
 Transform:
@@ -1422,7 +1414,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1784650515 stripped
 RectTransform:
@@ -1756,6 +1748,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7055872751370860701, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803795239890003840, guid: dc601bc7682a19147b6a6ed3c2ea1f17, type: 3}
+      propertyPath: m_CullTransparentMesh
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

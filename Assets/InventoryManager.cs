@@ -22,7 +22,7 @@ public class InventoryManager : MonoBehaviour {
     private void Start() {
         slots = new GameObject[slotHolder.transform.childCount];
         items = new SlotClass[slots.Length];
-        //initializing slots 
+        //initializing slots i
         for (int i = 0; i < items.Length; i++) {
             items[i] = new SlotClass();
         }
@@ -71,11 +71,11 @@ public class InventoryManager : MonoBehaviour {
             try {
                 slots[i].transform.GetChild(0).GetComponent<Image>().enabled = true;
                 slots[i].transform.GetChild(0).GetComponent<Image>().sprite = items[i].GetItem().itemIcon;
-                //if(items[i].GetItem().isStackable)
-                slots[i].transform.GetChild(1).GetComponent<Text>().text = items[i].GetQuantity() + "";
-                /*else {
+                if(items[i].GetItem().isStackable) {
+                    slots[i].transform.GetChild(1).GetComponent<Text>().text = items[i].GetQuantity() + "";
+                } else {
                     slots[i].transform.GetChild(1).GetComponent<Text>().text = "";
-                }*/
+                }
             } catch {
                 slots[i].transform.GetChild(0).GetComponent<Image>().sprite = null;
                 slots[i].transform.GetChild(0).GetComponent<Image>().enabled = false;
@@ -87,7 +87,7 @@ public class InventoryManager : MonoBehaviour {
     public bool Add(ItemClass item, int quantity) {
         //check if inventory contains item
         SlotClass slot = Contains(item);
-        if (slot != null) { //&& slot.GetItem().isStackable
+        if (slot != null && slot.GetItem().isStackable) { 
             slot.AddQuantity(1);
         } else {
             for (int i = 0; i < items.Length; i++) {
