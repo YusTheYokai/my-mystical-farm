@@ -136,8 +136,10 @@ GameObject:
   - component: {fileID: 39663302}
   - component: {fileID: 39663301}
   - component: {fileID: 39663300}
+  - component: {fileID: 39663305}
+  - component: {fileID: 39663306}
   m_Layer: 0
-  m_Name: cow_pic
+  m_Name: cow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,8 +159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   isWalking: 0
-  walkTime: 5
-  waitTime: 2
+  walkTime: 1
+  waitTime: 1
 --- !u!50 &39663301
 Rigidbody2D:
   serializedVersion: 4
@@ -196,7 +198,7 @@ BoxCollider2D:
   m_Offset: {x: -2.1149511, y: -2.3664412}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.4868973, y: 0.5065513}
     oldSize: {x: 31.25, y: 31.25}
     newSize: {x: 31.25, y: 31.25}
     adaptiveTilingThreshold: 0.5
@@ -264,14 +266,82 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39663299}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.902, y: -0.474, z: 0}
-  m_LocalScale: {x: 0.08145629, y: 0.08167757, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.9857006, y: 15.686199, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &317800097
+--- !u!60 &39663305
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39663299}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4868973, y: 0.5065513}
+    oldSize: {x: 31.25, y: 31.25}
+    newSize: {x: 31.25, y: 31.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.34053993, y: -5.767229}
+      - {x: -0.34053993, y: -7.829729}
+      - {x: 4.15946, y: -7.829729}
+      - {x: 4.28446, y: -7.704729}
+      - {x: 4.78446, y: -4.704729}
+      - {x: 5.47196, y: -4.829729}
+      - {x: 6.15946, y: -4.079729}
+      - {x: 6.15946, y: -2.329729}
+      - {x: 5.53446, y: -0.7672291}
+      - {x: 4.40946, y: 0.6077709}
+      - {x: -0.028039932, y: 2.420271}
+      - {x: -9.71554, y: 2.420271}
+      - {x: -9.71554, y: 0.8577709}
+      - {x: -9.21554, y: 0.29527092}
+      - {x: -8.15304, y: 0.04527092}
+      - {x: -8.65304, y: -3.454729}
+      - {x: -7.27804, y: -4.704729}
+      - {x: -5.46554, y: -4.892229}
+      - {x: -5.34054, y: -7.829729}
+      - {x: -3.21554, y: -7.829729}
+      - {x: -2.90304, y: -6.392229}
+      - {x: -2.84054, y: -7.829729}
+      - {x: -0.71553993, y: -7.829729}
+--- !u!114 &39663306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39663299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a9a27ff5f3e1e48820c46fbf2630b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  isWalking: 0
+  walkTime: 0
+  waitTime: 0
+  cow: {fileID: 39663303}
+  cowForms:
+  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
+  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
+--- !u!1 &90181611
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -427,13 +497,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1188258781}
-  - component: {fileID: 1188258780}
-  - component: {fileID: 1188258779}
-  - component: {fileID: 1188258778}
-  - component: {fileID: 1188258777}
+  - component: {fileID: 796746630}
+  - component: {fileID: 796746629}
+  - component: {fileID: 796746628}
+  - component: {fileID: 796746627}
+  - component: {fileID: 796746626}
+  - component: {fileID: 796746631}
+  - component: {fileID: 796746632}
   m_Layer: 0
-  m_Name: cow_pic (5)
+  m_Name: cow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -453,30 +525,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   isWalking: 0
-  walkTime: 5
-  waitTime: 2
---- !u!50 &1188258778
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188258776}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &1188258779
+  walkTime: 1
+  waitTime: 1
+--- !u!61 &796746627
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -492,7 +543,7 @@ BoxCollider2D:
   m_Offset: {x: -2.1149511, y: -2.3664412}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.4868973, y: 0.5065513}
     oldSize: {x: 31.25, y: 31.25}
     newSize: {x: 31.25, y: 31.25}
     adaptiveTilingThreshold: 0.5
@@ -567,7 +618,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1291589881
+--- !u!60 &796746631
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796746625}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4868973, y: 0.5065513}
+    oldSize: {x: 31.25, y: 31.25}
+    newSize: {x: 31.25, y: 31.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.34053993, y: -5.767229}
+      - {x: -0.34053993, y: -7.829729}
+      - {x: 4.15946, y: -7.829729}
+      - {x: 4.28446, y: -7.704729}
+      - {x: 4.78446, y: -4.704729}
+      - {x: 5.47196, y: -4.829729}
+      - {x: 6.15946, y: -4.079729}
+      - {x: 6.15946, y: -2.329729}
+      - {x: 5.53446, y: -0.7672291}
+      - {x: 4.40946, y: 0.6077709}
+      - {x: -0.028039932, y: 2.420271}
+      - {x: -9.71554, y: 2.420271}
+      - {x: -9.71554, y: 0.8577709}
+      - {x: -9.21554, y: 0.29527092}
+      - {x: -8.15304, y: 0.04527092}
+      - {x: -8.65304, y: -3.454729}
+      - {x: -7.27804, y: -4.704729}
+      - {x: -5.46554, y: -4.892229}
+      - {x: -5.34054, y: -7.829729}
+      - {x: -3.21554, y: -7.829729}
+      - {x: -2.90304, y: -6.392229}
+      - {x: -2.84054, y: -7.829729}
+      - {x: -0.71553993, y: -7.829729}
+--- !u!114 &796746632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796746625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a9a27ff5f3e1e48820c46fbf2630b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  isWalking: 0
+  walkTime: 0
+  waitTime: 0
+  cow: {fileID: 796746629}
+  cowForms:
+  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
+  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
+--- !u!1 &1181283283
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -575,13 +694,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1291589886}
-  - component: {fileID: 1291589885}
-  - component: {fileID: 1291589884}
-  - component: {fileID: 1291589883}
-  - component: {fileID: 1291589882}
+  - component: {fileID: 1181283288}
+  - component: {fileID: 1181283287}
+  - component: {fileID: 1181283286}
+  - component: {fileID: 1181283285}
+  - component: {fileID: 1181283284}
+  - component: {fileID: 1181283289}
+  - component: {fileID: 1181283290}
   m_Layer: 0
-  m_Name: cow_pic (1)
+  m_Name: cow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -601,30 +722,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   isWalking: 0
-  walkTime: 5
-  waitTime: 2
---- !u!50 &1291589883
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1291589881}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &1291589884
+  walkTime: 1
+  waitTime: 1
+--- !u!61 &1181283285
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -640,7 +740,7 @@ BoxCollider2D:
   m_Offset: {x: -2.1149511, y: -2.3664412}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.4868973, y: 0.5065513}
     oldSize: {x: 31.25, y: 31.25}
     newSize: {x: 31.25, y: 31.25}
     adaptiveTilingThreshold: 0.5
@@ -715,7 +815,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1842593457
+--- !u!60 &1181283289
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181283283}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4868973, y: 0.5065513}
+    oldSize: {x: 31.25, y: 31.25}
+    newSize: {x: 31.25, y: 31.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.34053993, y: -5.767229}
+      - {x: -0.34053993, y: -7.829729}
+      - {x: 4.15946, y: -7.829729}
+      - {x: 4.28446, y: -7.704729}
+      - {x: 4.78446, y: -4.704729}
+      - {x: 5.47196, y: -4.829729}
+      - {x: 6.15946, y: -4.079729}
+      - {x: 6.15946, y: -2.329729}
+      - {x: 5.53446, y: -0.7672291}
+      - {x: 4.40946, y: 0.6077709}
+      - {x: -0.028039932, y: 2.420271}
+      - {x: -9.71554, y: 2.420271}
+      - {x: -9.71554, y: 0.8577709}
+      - {x: -9.21554, y: 0.29527092}
+      - {x: -8.15304, y: 0.04527092}
+      - {x: -8.65304, y: -3.454729}
+      - {x: -7.27804, y: -4.704729}
+      - {x: -5.46554, y: -4.892229}
+      - {x: -5.34054, y: -7.829729}
+      - {x: -3.21554, y: -7.829729}
+      - {x: -2.90304, y: -6.392229}
+      - {x: -2.84054, y: -7.829729}
+      - {x: -0.71553993, y: -7.829729}
+--- !u!114 &1181283290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181283283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a9a27ff5f3e1e48820c46fbf2630b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  isWalking: 0
+  walkTime: 0
+  waitTime: 0
+  cow: {fileID: 1181283287}
+  cowForms:
+  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
+  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
+--- !u!1 &1190858872
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -723,13 +891,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1842593462}
-  - component: {fileID: 1842593461}
-  - component: {fileID: 1842593460}
-  - component: {fileID: 1842593459}
-  - component: {fileID: 1842593458}
+  - component: {fileID: 1190858877}
+  - component: {fileID: 1190858876}
+  - component: {fileID: 1190858875}
+  - component: {fileID: 1190858874}
+  - component: {fileID: 1190858873}
+  - component: {fileID: 1190858878}
+  - component: {fileID: 1190858879}
   m_Layer: 0
-  m_Name: cow_pic (3)
+  m_Name: cow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -749,30 +919,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   isWalking: 0
-  walkTime: 5
-  waitTime: 2
---- !u!50 &1842593459
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1842593457}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &1842593460
+  walkTime: 1
+  waitTime: 1
+--- !u!61 &1190858874
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -788,7 +937,7 @@ BoxCollider2D:
   m_Offset: {x: -2.1149511, y: -2.3664412}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.4868973, y: 0.5065513}
     oldSize: {x: 31.25, y: 31.25}
     newSize: {x: 31.25, y: 31.25}
     adaptiveTilingThreshold: 0.5
@@ -857,13 +1006,81 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842593457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.036, y: 0.224, z: 0}
-  m_LocalScale: {x: 0.08145629, y: 0.08167757, z: 1}
+  m_LocalPosition: {x: -34.2, y: -3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2049429143
+--- !u!60 &1190858878
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190858872}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4868973, y: 0.5065513}
+    oldSize: {x: 31.25, y: 31.25}
+    newSize: {x: 31.25, y: 31.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.34053993, y: -5.767229}
+      - {x: -0.34053993, y: -7.829729}
+      - {x: 4.15946, y: -7.829729}
+      - {x: 4.28446, y: -7.704729}
+      - {x: 4.78446, y: -4.704729}
+      - {x: 5.47196, y: -4.829729}
+      - {x: 6.15946, y: -4.079729}
+      - {x: 6.15946, y: -2.329729}
+      - {x: 5.53446, y: -0.7672291}
+      - {x: 4.40946, y: 0.6077709}
+      - {x: -0.028039932, y: 2.420271}
+      - {x: -9.71554, y: 2.420271}
+      - {x: -9.71554, y: 0.8577709}
+      - {x: -9.21554, y: 0.29527092}
+      - {x: -8.15304, y: 0.04527092}
+      - {x: -8.65304, y: -3.454729}
+      - {x: -7.27804, y: -4.704729}
+      - {x: -5.46554, y: -4.892229}
+      - {x: -5.34054, y: -7.829729}
+      - {x: -3.21554, y: -7.829729}
+      - {x: -2.90304, y: -6.392229}
+      - {x: -2.84054, y: -7.829729}
+      - {x: -0.71553993, y: -7.829729}
+--- !u!114 &1190858879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190858872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a9a27ff5f3e1e48820c46fbf2630b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  isWalking: 0
+  walkTime: 0
+  waitTime: 0
+  cow: {fileID: 1190858876}
+  cowForms:
+  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
+  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
+--- !u!1 &1489385290
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -871,13 +1088,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2049429148}
-  - component: {fileID: 2049429147}
-  - component: {fileID: 2049429146}
-  - component: {fileID: 2049429145}
-  - component: {fileID: 2049429144}
+  - component: {fileID: 1489385295}
+  - component: {fileID: 1489385294}
+  - component: {fileID: 1489385293}
+  - component: {fileID: 1489385292}
+  - component: {fileID: 1489385291}
+  - component: {fileID: 1489385296}
+  - component: {fileID: 1489385297}
   m_Layer: 0
-  m_Name: cow_pic (4)
+  m_Name: cow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -897,30 +1116,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   isWalking: 0
-  walkTime: 5
-  waitTime: 2
---- !u!50 &2049429145
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2049429143}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &2049429146
+  walkTime: 1
+  waitTime: 1
+--- !u!61 &1489385292
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -936,7 +1134,7 @@ BoxCollider2D:
   m_Offset: {x: -2.1149511, y: -2.3664412}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.4868973, y: 0.5065513}
     oldSize: {x: 31.25, y: 31.25}
     newSize: {x: 31.25, y: 31.25}
     adaptiveTilingThreshold: 0.5
@@ -1011,3 +1209,71 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1489385296
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489385290}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4868973, y: 0.5065513}
+    oldSize: {x: 31.25, y: 31.25}
+    newSize: {x: 31.25, y: 31.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.34053993, y: -5.767229}
+      - {x: -0.34053993, y: -7.829729}
+      - {x: 4.15946, y: -7.829729}
+      - {x: 4.28446, y: -7.704729}
+      - {x: 4.78446, y: -4.704729}
+      - {x: 5.47196, y: -4.829729}
+      - {x: 6.15946, y: -4.079729}
+      - {x: 6.15946, y: -2.329729}
+      - {x: 5.53446, y: -0.7672291}
+      - {x: 4.40946, y: 0.6077709}
+      - {x: -0.028039932, y: 2.420271}
+      - {x: -9.71554, y: 2.420271}
+      - {x: -9.71554, y: 0.8577709}
+      - {x: -9.21554, y: 0.29527092}
+      - {x: -8.15304, y: 0.04527092}
+      - {x: -8.65304, y: -3.454729}
+      - {x: -7.27804, y: -4.704729}
+      - {x: -5.46554, y: -4.892229}
+      - {x: -5.34054, y: -7.829729}
+      - {x: -3.21554, y: -7.829729}
+      - {x: -2.90304, y: -6.392229}
+      - {x: -2.84054, y: -7.829729}
+      - {x: -0.71553993, y: -7.829729}
+--- !u!114 &1489385297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489385290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a9a27ff5f3e1e48820c46fbf2630b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  isWalking: 0
+  walkTime: 0
+  waitTime: 0
+  cow: {fileID: 1489385294}
+  cowForms:
+  - {fileID: 21300000, guid: 1dd7f104ccb0ad547b77b15edbf095ad, type: 3}
+  - {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
