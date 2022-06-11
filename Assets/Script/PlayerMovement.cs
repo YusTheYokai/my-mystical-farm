@@ -6,12 +6,12 @@ public class PlayerMovement : MonoBehaviour {
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
-    public Vector2 movement;
-    private float moveSpeed = 1;//0.5f
+    private Vector2 movement;
+    private float moveSpeed = 10;
     private float maxStamina = 250f;
     private float currentStamina = 250f;
-    private const float sprintStat = 2;
-    private const float walking = 1;
+    private const float sprintStat = 20;
+    private const float walking = 10;
     
     private void Start() { 
         Physics2D.IgnoreLayerCollision(3,6);
