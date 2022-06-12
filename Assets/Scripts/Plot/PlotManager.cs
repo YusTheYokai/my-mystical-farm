@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlotManager : MonoBehaviour
 {
-
+    [SerializeField] private ItemClass item;
     bool isPlanted = false;
     public SpriteRenderer plant;
 
@@ -47,6 +47,8 @@ public class PlotManager : MonoBehaviour
     void Harvest(){
         isPlanted = false;
         plant.gameObject.SetActive(false);
+        
+        InventoryManager.Instance.Add(Instantiate(item), 3);
     }
 
     void Plant(){
