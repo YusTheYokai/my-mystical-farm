@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour {
+    public static InventoryManager Instance;
+
     [SerializeField] private Canvas inventoryCanvas;
     [SerializeField] private GameObject itemCursor;
     [SerializeField] private GameObject slotHolder;
@@ -29,6 +31,15 @@ public class InventoryManager : MonoBehaviour {
         }
     }
 
+    void Awake() {
+        if (Instance == null) {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else {
+            Destroy(gameObject);
+        }
+    }
+    
     private void Start() {
         slots = new GameObject[slotHolder.transform.childCount];
         items = new SlotClass[slots.Length];
