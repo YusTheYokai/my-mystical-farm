@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8619248264774933430}
-  - component: {fileID: 5076848184388001150}
   - component: {fileID: 2413593812937718816}
   - component: {fileID: 7610874356774079382}
   - component: {fileID: 4109230848314351885}
+  - component: {fileID: 153133852910377549}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -34,21 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5076848184388001150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4958159677782687861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a2cd2069f345474f9a10b459f91bed2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 8
-  walkTime: 5
-  waitTime: 3
 --- !u!212 &2413593812937718816
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -163,3 +148,19 @@ PolygonCollider2D:
       - {x: 2, y: -0.75}
       - {x: 2.75, y: 2.875}
       - {x: 3.875, y: 4}
+--- !u!114 &153133852910377549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4958159677782687861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac540ee0ba3b42b40b59d7a3f694bae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 8
+  walkTime: 5
+  waitTime: 0
+  fed: {fileID: 21300000, guid: 7b722d2445d65624aba9175d779e86f3, type: 3}
