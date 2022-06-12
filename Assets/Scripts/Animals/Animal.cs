@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Animal : MonoBehaviour{
+public class Animal : MonoBehaviour {
+
     public float moveSpeed;
-    public bool isWalking;
     public float walkTime;
     public float waitTime;
+    private bool isWalking;
 
     private int WalkDirection;
     private float walkCounter;
@@ -14,7 +13,7 @@ public class Animal : MonoBehaviour{
     private Rigidbody2D myRigidbody;
 
     // Start is called before the first frame update
-    void Start() {
+    public virtual void Start() {
         myRigidbody = GetComponent<Rigidbody2D>();
 
         waitCounter = waitTime;
@@ -56,11 +55,9 @@ public class Animal : MonoBehaviour{
                 ChooseDirection();
             }
         }
-        
     }
 
     public void ChooseDirection() {
-
         WalkDirection = Random.Range(0, 4);
         isWalking = true;
         walkCounter = walkTime;
