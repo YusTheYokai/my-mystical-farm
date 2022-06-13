@@ -788,6 +788,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72855d01d02020f48b1e29186c86dc63, type: 3}
+--- !u!1 &1003950693 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4958159677782687861, guid: 04efa71af088ffd46bcdd5c3563ce0e9, type: 3}
+  m_PrefabInstance: {fileID: 29150623}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1003950699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003950693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a38894067708fb44b9be4239e0ab27a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  devilCat: {fileID: 21300000, guid: 30b68485486a2e14fb389e0cac5f3a3b, type: 3}
 --- !u!1001 &1031931501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1335,7 +1353,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.4868973, y: 0.5065513}
-    oldSize: {x: 31.25, y: 31.25}
+    oldSize: {x: 7.8125, y: 7.8125}
     newSize: {x: 31.25, y: 31.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
