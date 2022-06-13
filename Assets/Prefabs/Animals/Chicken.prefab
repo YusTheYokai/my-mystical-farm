@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5097906099031247992}
   - component: {fileID: -3578363768379494586}
   - component: {fileID: -6813320020507837546}
+  - component: {fileID: -723474022385571195}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -46,8 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  walkTime: 3
-  waitTime: 3
+  walkTime: 1
+  waitTime: 4
 --- !u!212 &-3578363768379494586
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -120,3 +121,49 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!60 &-723474022385571195
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618366665220724502}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.8125, y: 7.8125}
+    newSize: {x: 5, y: 5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.671875, y: 0.375}
+      - {x: 0.6875, y: 0.640625}
+      - {x: 0.21875, y: 1.109375}
+      - {x: 0.03125, y: 1.28125}
+      - {x: -0.375, y: 1.28125}
+      - {x: -0.53125, y: 1.15625}
+      - {x: -0.5, y: 0.71875}
+      - {x: -0.71875, y: 0.328125}
+      - {x: -1.078125, y: 0.53125}
+      - {x: -1.421875, y: 0.53125}
+      - {x: -1.59375, y: 0.359375}
+      - {x: -1.59375, y: -0.515625}
+      - {x: -1.46875, y: -0.640625}
+      - {x: -1.109375, y: -0.96875}
+      - {x: -0.8125, y: -0.96875}
+      - {x: -0.8125, y: -1.25}
+      - {x: -0.796875, y: -1.28125}
+      - {x: 0.390625, y: -1.28125}
+      - {x: 0.671875, y: -0.859375}
+      - {x: 0.8125, y: -0.671875}
+      - {x: 0.8125, y: 0.34375}
