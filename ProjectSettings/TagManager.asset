@@ -5,20 +5,21 @@ TagManager:
   serializedVersion: 2
   tags:
   - Plot
+  - Inventory
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
   - Floor
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Foreground
+  - Player
+  - Background
   - 
   - 
   - 

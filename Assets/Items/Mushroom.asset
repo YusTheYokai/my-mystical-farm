@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c1fa7ca235e3874387c692654e85c1c, type: 3}
-  m_Name: DummyItem
+  m_Script: {fileID: 11500000, guid: 24b30dd67ce79764698738bc7e51e210, type: 3}
+  m_Name: Mushroom
   m_EditorClassIdentifier: 
-  itemName: DummyItem
-  itemIcon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  itemName: Mushroom
+  itemIcon: {fileID: -3097342991762851659, guid: 82d9eb9b58fa85846af0bfd18ddeee37, type: 3}
   isStackable: 1

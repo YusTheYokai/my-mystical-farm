@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6813320020507837546}
   - component: {fileID: 4549834109067735412}
   - component: {fileID: -5158832161852789193}
+  - component: {fileID: -723474022385571195}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -34,6 +35,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5097906099031247992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618366665220724502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a2cd2069f345474f9a10b459f91bed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  walkTime: 1
+  waitTime: 4
 --- !u!212 &-3578363768379494586
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -139,7 +155,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 31.25, y: 31.25}
+    oldSize: {x: 7.8125, y: 7.8125}
     newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -147,24 +163,24 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.6875, y: 1.5}
-      - {x: 2.75, y: 2.5625}
-      - {x: 0.875, y: 4.4375}
-      - {x: 0.125, y: 5.125}
-      - {x: -1.5, y: 5.125}
-      - {x: -2.125, y: 4.625}
-      - {x: -2, y: 2.875}
-      - {x: -2.875, y: 1.3125}
-      - {x: -4.3125, y: 2.125}
-      - {x: -5.6875, y: 2.125}
-      - {x: -6.375, y: 1.4375}
-      - {x: -6.375, y: -2.0625}
-      - {x: -5.875, y: -2.5625}
-      - {x: -4.4375, y: -3.875}
-      - {x: -3.25, y: -3.875}
-      - {x: -3.25, y: -5}
-      - {x: -3.1875, y: -5.125}
-      - {x: 1.5625, y: -5.125}
-      - {x: 2.6875, y: -3.4375}
-      - {x: 3.25, y: -2.6875}
-      - {x: 3.25, y: 1.375}
+    - - {x: 0.671875, y: 0.375}
+      - {x: 0.6875, y: 0.640625}
+      - {x: 0.21875, y: 1.109375}
+      - {x: 0.03125, y: 1.28125}
+      - {x: -0.375, y: 1.28125}
+      - {x: -0.53125, y: 1.15625}
+      - {x: -0.5, y: 0.71875}
+      - {x: -0.71875, y: 0.328125}
+      - {x: -1.078125, y: 0.53125}
+      - {x: -1.421875, y: 0.53125}
+      - {x: -1.59375, y: 0.359375}
+      - {x: -1.59375, y: -0.515625}
+      - {x: -1.46875, y: -0.640625}
+      - {x: -1.109375, y: -0.96875}
+      - {x: -0.8125, y: -0.96875}
+      - {x: -0.8125, y: -1.25}
+      - {x: -0.796875, y: -1.28125}
+      - {x: 0.390625, y: -1.28125}
+      - {x: 0.671875, y: -0.859375}
+      - {x: 0.8125, y: -0.671875}
+      - {x: 0.8125, y: 0.34375}
