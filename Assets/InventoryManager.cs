@@ -39,7 +39,7 @@ public class InventoryManager : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-
+    
     private void Start() {
         slots = new GameObject[slotHolder.transform.childCount];
         items = new SlotClass[slots.Length];

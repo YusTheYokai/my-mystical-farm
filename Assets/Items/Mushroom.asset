@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b30dd67ce79764698738bc7e51e210, type: 3}
+  m_Name: Mushroom
+  m_EditorClassIdentifier: 
+  itemName: Mushroom
+  itemIcon: {fileID: -3097342991762851659, guid: 82d9eb9b58fa85846af0bfd18ddeee37, type: 3}
+  isStackable: 1
