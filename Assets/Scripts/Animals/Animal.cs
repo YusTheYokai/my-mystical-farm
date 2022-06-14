@@ -31,13 +31,13 @@ public class Animal : MonoBehaviour {
                 case 0: 
                     myRigidbody.velocity = new Vector2(0, moveSpeed);
                     break;
-                case 1:
+                case 1: 
                     myRigidbody.velocity = new Vector2(moveSpeed, 0);
                     break;
-                case 2:
+                case 2: 
                     myRigidbody.velocity = new Vector2(0, -moveSpeed);
                     break;
-                case 3:
+                case 3: 
                     myRigidbody.velocity = new Vector2(-moveSpeed, 0);
                     break;
             }
