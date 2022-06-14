@@ -8,11 +8,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9095885685818692465}
-  - component: {fileID: 5113913516511897174}
-  - component: {fileID: 1633112016807347289}
-  - component: {fileID: 7009090304148205022}
-  - component: {fileID: 3768890960001186174}
+  - component: {fileID: 1328614077326174955}
+  - component: {fileID: 5097906099031247992}
+  - component: {fileID: -3578363768379494586}
+  - component: {fileID: -6813320020507837546}
+  - component: {fileID: -723474022385571195}
+  - component: {fileID: 5554780606308608429}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -147,24 +148,39 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.6875, y: 1.5}
-      - {x: 2.75, y: 2.5625}
-      - {x: 0.875, y: 4.4375}
-      - {x: 0.125, y: 5.125}
-      - {x: -1.5, y: 5.125}
-      - {x: -2.125, y: 4.625}
-      - {x: -2, y: 2.875}
-      - {x: -2.875, y: 1.3125}
-      - {x: -4.3125, y: 2.125}
-      - {x: -5.6875, y: 2.125}
-      - {x: -6.375, y: 1.4375}
-      - {x: -6.375, y: -2.0625}
-      - {x: -5.875, y: -2.5625}
-      - {x: -4.4375, y: -3.875}
-      - {x: -3.25, y: -3.875}
-      - {x: -3.25, y: -5}
-      - {x: -3.1875, y: -5.125}
-      - {x: 1.5625, y: -5.125}
-      - {x: 2.6875, y: -3.4375}
-      - {x: 3.25, y: -2.6875}
-      - {x: 3.25, y: 1.375}
+    - - {x: 0.671875, y: 0.375}
+      - {x: 0.6875, y: 0.640625}
+      - {x: 0.21875, y: 1.109375}
+      - {x: 0.03125, y: 1.28125}
+      - {x: -0.375, y: 1.28125}
+      - {x: -0.53125, y: 1.15625}
+      - {x: -0.5, y: 0.71875}
+      - {x: -0.71875, y: 0.328125}
+      - {x: -1.078125, y: 0.53125}
+      - {x: -1.421875, y: 0.53125}
+      - {x: -1.59375, y: 0.359375}
+      - {x: -1.59375, y: -0.515625}
+      - {x: -1.46875, y: -0.640625}
+      - {x: -1.109375, y: -0.96875}
+      - {x: -0.8125, y: -0.96875}
+      - {x: -0.8125, y: -1.25}
+      - {x: -0.796875, y: -1.28125}
+      - {x: 0.390625, y: -1.28125}
+      - {x: 0.671875, y: -0.859375}
+      - {x: 0.8125, y: -0.671875}
+      - {x: 0.8125, y: 0.34375}
+--- !u!114 &5554780606308608429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618366665220724502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9473d432925224145ac2c379cffea309, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedItemPrefab: {fileID: 3222567077845646577, guid: 6ffe08ea29fc48d4da136a411415eb8f, type: 3}
+  droppedItemsContainer: {fileID: 0}
+  egg: {fileID: 11400000, guid: 7f9564f79071f8442beb80bedeb0a73f, type: 2}
