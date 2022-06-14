@@ -100,7 +100,7 @@ public class InventoryManager : MonoBehaviour {
         //check if inventory contains item
         SlotClass slot = Contains(item);
         if (slot != null && slot.GetItem().isStackable) { 
-            slot.AddQuantity(1);
+            slot.AddQuantity(quantity);
         } else {
             for (int i = 0; i < items.Length; i++) {
                 if (items[i].GetItem() == null) { //empty slot

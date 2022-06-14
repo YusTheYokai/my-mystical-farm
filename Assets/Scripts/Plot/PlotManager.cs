@@ -48,7 +48,7 @@ public class PlotManager : MonoBehaviour
         isPlanted = false;
         plant.gameObject.SetActive(false);
         
-        InventoryManager.Instance.Add(Instantiate(item), 3);
+        InventoryManager.Instance.Add(item, 3);
     }
 
     void Plant(){

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimalAnimation : MonoBehaviour {
+    private SpriteRenderer spriteRenderer;
+    private FeedableAnimal feedableAnimal;
 
     public float moveSpeed;
     private Rigidbody2D rb;
@@ -18,10 +20,12 @@ public class AnimalAnimation : MonoBehaviour {
     private int walkDirection;
 
     public Animator animator;
- 
+
     void Start () {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        feedableAnimal = GetComponent<FeedableAnimal>();
         waitCounter = waitTime;
         walkCounter = walkTime;
 
@@ -30,6 +34,10 @@ public class AnimalAnimation : MonoBehaviour {
  
  
     void Update () {
+        if (animator.enabled && spriteRenderer.sprite == feedableAnimal.getFed()) {
+            animator.enabled = false;
+        }
+
         if (isWalking == false) {
             facing.x = 0;
             facing.y = 0;
