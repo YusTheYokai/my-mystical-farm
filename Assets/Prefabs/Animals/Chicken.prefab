@@ -101,6 +101,8 @@ MonoBehaviour:
   moveSpeed: 3
   walkTime: 1
   waitTime: 4
+  waitOffset: 2
+  walkOffset: 3
   food: {fileID: 11400000, guid: 789d87e5c2ce81e4db113e851dfa957f, type: 2}
   fed: {fileID: 21300000, guid: ba68abb2a66939e4482e9c79d15104c3, type: 3}
 --- !u!50 &7009090304148205022
@@ -141,7 +143,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.8125, y: 7.8125}
+    oldSize: {x: 7.142857, y: 7.142857}
     newSize: {x: 31.25, y: 31.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
