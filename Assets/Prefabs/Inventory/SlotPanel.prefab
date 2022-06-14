@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 1017448149575332336}
   - component: {fileID: 335022489289953704}
   - component: {fileID: 7268133458721333246}
+  - component: {fileID: 7654567846758827439}
   m_Layer: 5
   m_Name: Stack
   m_TagString: Untagged
@@ -207,8 +208,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryCanvas: {fileID: 0}
-  droppedItemPrefab: {fileID: 0}
+  droppedItemPrefab: {fileID: 3222567077845646577, guid: 6ffe08ea29fc48d4da136a411415eb8f, type: 3}
   droppedItemsContainer: {fileID: 0}
+  slot:
+    item: {fileID: 0}
+    quantity: 0
 --- !u!225 &7268133458721333246
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -221,6 +225,32 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!61 &7654567846758827439
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4375484209074168548}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 40, y: 40}
+  m_EdgeRadius: 0
 --- !u!1 &7055872751370860701
 GameObject:
   m_ObjectHideFlags: 0
