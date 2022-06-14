@@ -11,6 +11,8 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     [SerializeField] private GameObject droppedItemPrefab;
     [SerializeField] private GameObject droppedItemsContainer;
 
+    public SlotClass slot;
+
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     private Vector2 startRectTransformPosition;
@@ -29,7 +31,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     public void OnDrag(PointerEventData eventData) {
         //item is moving alongside the mouse
         rectTransform.anchoredPosition += eventData.delta / inventoryCanvas.scaleFactor;
-    }  
+    }
 
     public void OnEndDrag(PointerEventData eventData) {
         if (eventData.pointerCurrentRaycast.gameObject != null) {
@@ -38,8 +40,6 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         } else {
             // create the dropped item
             GameObject droppedItem = Instantiate(droppedItemPrefab, PlayerMovement.Instance.getPosition(), Quaternion.identity, droppedItemsContainer.transform);
-            // set its scale
-            droppedItem.transform.localScale = new Vector3(2, 2, 2);
             // set its sprite
             droppedItem.GetComponent<SpriteRenderer>().sprite = transform.GetChild(0).GetComponent<Image>().sprite;
             // TODO: set its quantity for pickup

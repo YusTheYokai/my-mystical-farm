@@ -70,13 +70,16 @@ public class InventoryManager : MonoBehaviour {
     }
 
     #region Inventory Utils 
-    private void RefreshUI() {
+    public void RefreshUI() {
         for (int i = 0; i < slots.Length; i++) {
             Transform stack = slots[i].transform.GetChild(0);
+            DragDrop dragDrop = stack.GetComponent<DragDrop>();
             Image image = stack.GetChild(0).GetComponent<Image>();
             Text quantity = stack.GetChild(1).GetComponent<Text>();
 
             try {
+                dragDrop.slot = items[i];
+
                 image.enabled = true;
                 image.sprite = items[i].GetItem().itemIcon;
 
@@ -113,7 +116,6 @@ public class InventoryManager : MonoBehaviour {
     } 
 
     public bool Remove(ItemClass item) {
-        //items.Remove(item);
         SlotClass temp = Contains(item);
         if (temp != null) {
             if (temp.GetQuantity() > 1) {
@@ -157,7 +159,7 @@ public class InventoryManager : MonoBehaviour {
     }
 
     private int ClosestSlotIndex() {
-        var pairs = slots.Select(slot => new KeyValuePair<GameObject, float>(slot, Vector2.Distance(slot.transform.position, Input.mousePosition)));
+        var pairs = slots.Select(slot => new KeyValuePair<GameObject, float>(slot, Vector2.Distance(Camera.main.WorldToScreenPoint(slot.transform.position), Input.mousePosition)));
 
         KeyValuePair<GameObject, float> closest = new KeyValuePair<GameObject, float>(null, float.MaxValue);
         foreach (var pair in pairs) {
