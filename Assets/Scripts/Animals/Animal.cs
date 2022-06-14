@@ -10,12 +10,15 @@ public class Animal : MonoBehaviour {
     private int WalkDirection;
     private float walkCounter;
     private float waitCounter;
+    public float waitOffset;
+    public float walkOffset;
     private Rigidbody2D myRigidbody;
 
     // Start is called before the first frame update
     public virtual void Start() {
         myRigidbody = GetComponent<Rigidbody2D>();
-
+        waitTime += Random.Range(-waitOffset, waitOffset);
+        walkTime += Random.Range(-walkOffset, walkOffset);
         waitCounter = waitTime;
         walkCounter = walkTime;
 

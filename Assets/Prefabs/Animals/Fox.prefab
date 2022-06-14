@@ -49,6 +49,8 @@ MonoBehaviour:
   moveSpeed: 10
   walkTime: 4
   waitTime: 4
+  waitOffset: 1
+  walkOffset: 2
 --- !u!212 &5564279914577967769
 SpriteRenderer:
   m_ObjectHideFlags: 0

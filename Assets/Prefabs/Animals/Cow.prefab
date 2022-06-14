@@ -49,6 +49,8 @@ MonoBehaviour:
   moveSpeed: 2
   walkTime: 3
   waitTime: 8
+  waitOffset: 3
+  walkOffset: 4
   fed: {fileID: 21300000, guid: cb46c1d6fa13d864586995e7bae72bcf, type: 3}
 --- !u!212 &-6789475717207239287
 SpriteRenderer:
