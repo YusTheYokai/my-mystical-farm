@@ -1,13 +1,12 @@
 using UnityEngine;
 
-public class FeedableAnimal : Animal {
+public class FeedableAnimal : MonoBehaviour {
 
     [SerializeField] private ItemClass food;
     [SerializeField] private Sprite fed;
     private SpriteRenderer spriteRenderer;
 
-    public override void Start() {
-        base.Start();
+    public void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 

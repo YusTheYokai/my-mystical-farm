@@ -4330,6 +4330,10 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[22].y
       value: 1.375
       objectReference: {fileID: 0}
+    - target: {fileID: 5554780606308608429, guid: 72855d01d02020f48b1e29186c86dc63, type: 3}
+      propertyPath: droppedItemsContainer
+      value: 
+      objectReference: {fileID: 436776417}
     - target: {fileID: 9095885685818692465, guid: 72855d01d02020f48b1e29186c86dc63, type: 3}
       propertyPath: m_RootOrder
       value: 4

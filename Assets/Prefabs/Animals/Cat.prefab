@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2413593812937718816}
   - component: {fileID: 7610874356774079382}
   - component: {fileID: 4109230848314351885}
+  - component: {fileID: 3689016796054530939}
   - component: {fileID: 153133852910377549}
   - component: {fileID: -6475472877295766335}
   m_Layer: 0
@@ -149,6 +150,23 @@ PolygonCollider2D:
       - {x: 0.8582778, y: -1.2452717}
       - {x: 1.0457778, y: -0.33902168}
       - {x: 1.3270278, y: -0.057771683}
+--- !u!114 &3689016796054530939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4958159677782687861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a2cd2069f345474f9a10b459f91bed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 8
+  walkTime: 2
+  waitTime: 1
+  waitOffset: 2
+  walkOffset: 2
 --- !u!114 &153133852910377549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,11 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac540ee0ba3b42b40b59d7a3f694bae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
-  walkTime: 2
-  waitTime: 1
-  waitOffset: 2
-  walkOffset: 2
+  food: {fileID: 0}
   fed: {fileID: 21300000, guid: 7b722d2445d65624aba9175d779e86f3, type: 3}
 --- !u!114 &-6475472877295766335
 MonoBehaviour:
