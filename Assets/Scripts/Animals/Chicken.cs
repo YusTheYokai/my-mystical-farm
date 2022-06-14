@@ -10,11 +10,11 @@ public class Chicken : MonoBehaviour {
         int dropEgg = Random.Range(0, 10001);
 
         if (dropEgg == 7) {
-            GameObject droppedItem = Instantiate(droppedItemPrefab, transform.position, Quaternion.identity, droppedItemsContainer.transform);
-            DroppedItem item = droppedItem.GetComponent<DroppedItem>();
+            GameObject go = Instantiate(droppedItemPrefab, transform.position, Quaternion.identity, droppedItemsContainer.transform);
+            DroppedItem item = go.GetComponent<DroppedItem>();
             item.item = egg;
             item.quantity = 1;
-            droppedItem.GetComponent<SpriteRenderer>().sprite = egg.GetItem().itemIcon;
+            go.GetComponent<SpriteRenderer>().sprite = egg.GetItem().itemIcon;
         }
     }
 }

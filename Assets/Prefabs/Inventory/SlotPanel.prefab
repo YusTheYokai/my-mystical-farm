@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryCanvas: {fileID: 0}
-  droppedItemPrefab: {fileID: 0}
+  droppedItemPrefab: {fileID: 3222567077845646577, guid: 6ffe08ea29fc48d4da136a411415eb8f, type: 3}
   droppedItemsContainer: {fileID: 0}
   slot:
     item: {fileID: 0}
